@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C92C7D825428D0300E85F68 /* ClassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92C7D725428D0300E85F68 /* ClassModel.swift */; };
 		2C92C7DD25428D2300E85F68 /* ClassFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92C7DC25428D2300E85F68 /* ClassFunctions.swift */; };
+		2C92C7E02542908300E85F68 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92C7DF2542908300E85F68 /* Data.swift */; };
 		2CB7D1A325427B510097BE97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB7D1A225427B510097BE97 /* AppDelegate.swift */; };
 		2CB7D1A525427B510097BE97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB7D1A425427B510097BE97 /* SceneDelegate.swift */; };
 		2CB7D1A725427B510097BE97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB7D1A625427B510097BE97 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		2C92C7D725428D0300E85F68 /* ClassModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassModel.swift; sourceTree = "<group>"; };
 		2C92C7DC25428D2300E85F68 /* ClassFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassFunctions.swift; sourceTree = "<group>"; };
+		2C92C7DF2542908300E85F68 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		2CB7D19F25427B510097BE97 /* BalletBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BalletBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB7D1A225427B510097BE97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CB7D1A425427B510097BE97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 			isa = PBXGroup;
 			children = (
 				2C92C7D625428CDE00E85F68 /* Class */,
+				2C92C7DF2542908300E85F68 /* Data.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CB7D1A725427B510097BE97 /* ViewController.swift in Sources */,
+				2C92C7E02542908300E85F68 /* Data.swift in Sources */,
 				2C92C7DD25428D2300E85F68 /* ClassFunctions.swift in Sources */,
 				2CB7D1A325427B510097BE97 /* AppDelegate.swift in Sources */,
 				2C92C7D825428D0300E85F68 /* ClassModel.swift in Sources */,
