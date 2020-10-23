@@ -14,13 +14,18 @@ class ClassFunctions{
         
     }
     
-    static func readClass(){
+    static func readClass(completion: @escaping () -> ()){
+        DispatchQueue.global(qos: .userInteractive).async {
+            
+        }
         if Data.classModels.count == 0 {
             Data.classModels.append(ClassModel(title: "Children's Beginning"))
             Data.classModels.append(ClassModel(title: "Children's Intermediate"))
             Data.classModels.append(ClassModel(title: "Children's Advanced"))
         }
-        
+        DispatchQueue.main.async{
+            completion()
+        }
     }
     
     static func updateClass(classModel: ClassModel){
