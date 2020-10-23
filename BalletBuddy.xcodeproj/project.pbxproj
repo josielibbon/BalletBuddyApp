@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C92C7D825428D0300E85F68 /* ClassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92C7D725428D0300E85F68 /* ClassModel.swift */; };
+		2C92C7DD25428D2300E85F68 /* ClassFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92C7DC25428D2300E85F68 /* ClassFunctions.swift */; };
 		2CB7D1A325427B510097BE97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB7D1A225427B510097BE97 /* AppDelegate.swift */; };
 		2CB7D1A525427B510097BE97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB7D1A425427B510097BE97 /* SceneDelegate.swift */; };
 		2CB7D1A725427B510097BE97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB7D1A625427B510097BE97 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C92C7D725428D0300E85F68 /* ClassModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassModel.swift; sourceTree = "<group>"; };
+		2C92C7DC25428D2300E85F68 /* ClassFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassFunctions.swift; sourceTree = "<group>"; };
 		2CB7D19F25427B510097BE97 /* BalletBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BalletBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB7D1A225427B510097BE97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CB7D1A425427B510097BE97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C92C7D425428CCF00E85F68 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2C92C7D625428CDE00E85F68 /* Class */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2C92C7D625428CDE00E85F68 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				2C92C7D725428D0300E85F68 /* ClassModel.swift */,
+				2C92C7DC25428D2300E85F68 /* ClassFunctions.swift */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
 		2CB7D19625427B510097BE97 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +77,7 @@
 		2CB7D1A125427B510097BE97 /* BalletBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				2C92C7D425428CCF00E85F68 /* Model */,
 				2CB7D1A225427B510097BE97 /* AppDelegate.swift */,
 				2CB7D1A425427B510097BE97 /* SceneDelegate.swift */,
 				2CB7D1A625427B510097BE97 /* ViewController.swift */,
@@ -138,7 +160,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CB7D1A725427B510097BE97 /* ViewController.swift in Sources */,
+				2C92C7DD25428D2300E85F68 /* ClassFunctions.swift in Sources */,
 				2CB7D1A325427B510097BE97 /* AppDelegate.swift in Sources */,
+				2C92C7D825428D0300E85F68 /* ClassModel.swift in Sources */,
 				2CB7D1A525427B510097BE97 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
