@@ -10,10 +10,20 @@
 		2C92C7D825428D0300E85F68 /* ClassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92C7D725428D0300E85F68 /* ClassModel.swift */; };
 		2C92C7DD25428D2300E85F68 /* ClassFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92C7DC25428D2300E85F68 /* ClassFunctions.swift */; };
 		2C92C7E02542908300E85F68 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92C7DF2542908300E85F68 /* Data.swift */; };
+		2C92C7E5254295D300E85F68 /* ClassViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C92C7E4254295D300E85F68 /* ClassViewController.storyboard */; };
+		2C92C7E82542962B00E85F68 /* ClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92C7E72542962B00E85F68 /* ClassViewController.swift */; };
+		2C92C8252542B81500E85F68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92C8242542B81500E85F68 /* SceneDelegate.swift */; };
+		2C92C8332542D80400E85F68 /* ClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92C8322542D80400E85F68 /* ClassTableViewCell.swift */; };
+		2C92C8392543A46800E85F68 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92C8382543A46800E85F68 /* UIViewExtensions.swift */; };
+		2C92C83D2543A58900E85F68 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92C83C2543A58900E85F68 /* Theme.swift */; };
+		2C92C8402543A67200E85F68 /* Avenir Next.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 2C92C83F2543A67200E85F68 /* Avenir Next.ttc */; };
+		2C92C8432543A82500E85F68 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C92C8422543A82500E85F68 /* Colors.xcassets */; };
+		2C92C8462543BAC800E85F68 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92C8452543BAC800E85F68 /* UIButtonExtensions.swift */; };
+		2C92C84D2543BF4100E85F68 /* AddClassViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C92C84C2543BF4100E85F68 /* AddClassViewController.storyboard */; };
+		2C92C8562543BFDA00E85F68 /* AddClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92C8552543BFDA00E85F68 /* AddClassViewController.swift */; };
+		2C92C8602543E71D00E85F68 /* PopupUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92C85F2543E71D00E85F68 /* PopupUIView.swift */; };
+		2C92C8632543E90D00E85F68 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92C8622543E90D00E85F68 /* AppButton.swift */; };
 		2CB7D1A325427B510097BE97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB7D1A225427B510097BE97 /* AppDelegate.swift */; };
-		2CB7D1A525427B510097BE97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB7D1A425427B510097BE97 /* SceneDelegate.swift */; };
-		2CB7D1A725427B510097BE97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB7D1A625427B510097BE97 /* ViewController.swift */; };
-		2CB7D1AA25427B510097BE97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB7D1A825427B510097BE97 /* Main.storyboard */; };
 		2CB7D1AC25427B530097BE97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB7D1AB25427B530097BE97 /* Assets.xcassets */; };
 		2CB7D1AF25427B530097BE97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB7D1AD25427B530097BE97 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -22,11 +32,21 @@
 		2C92C7D725428D0300E85F68 /* ClassModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassModel.swift; sourceTree = "<group>"; };
 		2C92C7DC25428D2300E85F68 /* ClassFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassFunctions.swift; sourceTree = "<group>"; };
 		2C92C7DF2542908300E85F68 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		2C92C7E4254295D300E85F68 /* ClassViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClassViewController.storyboard; sourceTree = "<group>"; };
+		2C92C7E72542962B00E85F68 /* ClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassViewController.swift; sourceTree = "<group>"; };
+		2C92C8242542B81500E85F68 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = "../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/SceneDelegate.swift"; sourceTree = "<group>"; };
+		2C92C8322542D80400E85F68 /* ClassTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTableViewCell.swift; sourceTree = "<group>"; };
+		2C92C8382543A46800E85F68 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		2C92C83C2543A58900E85F68 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		2C92C83F2543A67200E85F68 /* Avenir Next.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir Next.ttc"; sourceTree = "<group>"; };
+		2C92C8422543A82500E85F68 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		2C92C8452543BAC800E85F68 /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
+		2C92C84C2543BF4100E85F68 /* AddClassViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddClassViewController.storyboard; sourceTree = "<group>"; };
+		2C92C8552543BFDA00E85F68 /* AddClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClassViewController.swift; sourceTree = "<group>"; };
+		2C92C85F2543E71D00E85F68 /* PopupUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupUIView.swift; sourceTree = "<group>"; };
+		2C92C8622543E90D00E85F68 /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
 		2CB7D19F25427B510097BE97 /* BalletBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BalletBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB7D1A225427B510097BE97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2CB7D1A425427B510097BE97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2CB7D1A625427B510097BE97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2CB7D1A925427B510097BE97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2CB7D1AB25427B530097BE97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CB7D1AE25427B530097BE97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CB7D1B025427B530097BE97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,8 +66,8 @@
 		2C92C7D425428CCF00E85F68 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2C92C7D625428CDE00E85F68 /* Class */,
 				2C92C7DF2542908300E85F68 /* Data.swift */,
+				2C92C7D625428CDE00E85F68 /* Class */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -59,6 +79,64 @@
 				2C92C7DC25428D2300E85F68 /* ClassFunctions.swift */,
 			);
 			path = Class;
+			sourceTree = "<group>";
+		};
+		2C92C7E22542956C00E85F68 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C92C84F2543BF5C00E85F68 /* AddClassViewController */,
+				2C92C7E32542958300E85F68 /* ClassViewController */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2C92C7E32542958300E85F68 /* ClassViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2C92C7E4254295D300E85F68 /* ClassViewController.storyboard */,
+				2C92C7E72542962B00E85F68 /* ClassViewController.swift */,
+				2C92C8322542D80400E85F68 /* ClassTableViewCell.swift */,
+			);
+			path = ClassViewController;
+			sourceTree = "<group>";
+		};
+		2C92C8372543A42F00E85F68 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2C92C8382543A46800E85F68 /* UIViewExtensions.swift */,
+				2C92C8452543BAC800E85F68 /* UIButtonExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2C92C83B2543A57200E85F68 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2C92C85A2543E63F00E85F68 /* Custom Controls */,
+				2C92C8372543A42F00E85F68 /* Extensions */,
+				2C92C83F2543A67200E85F68 /* Avenir Next.ttc */,
+				2C92C83C2543A58900E85F68 /* Theme.swift */,
+				2C92C8422543A82500E85F68 /* Colors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2C92C84F2543BF5C00E85F68 /* AddClassViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2C92C84C2543BF4100E85F68 /* AddClassViewController.storyboard */,
+				2C92C8552543BFDA00E85F68 /* AddClassViewController.swift */,
+			);
+			path = AddClassViewController;
+			sourceTree = "<group>";
+		};
+		2C92C85A2543E63F00E85F68 /* Custom Controls */ = {
+			isa = PBXGroup;
+			children = (
+				2C92C85F2543E71D00E85F68 /* PopupUIView.swift */,
+				2C92C8622543E90D00E85F68 /* AppButton.swift */,
+			);
+			path = "Custom Controls";
 			sourceTree = "<group>";
 		};
 		2CB7D19625427B510097BE97 = {
@@ -80,14 +158,14 @@
 		2CB7D1A125427B510097BE97 /* BalletBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				2C92C83B2543A57200E85F68 /* Resources */,
 				2C92C7D425428CCF00E85F68 /* Model */,
+				2C92C7E22542956C00E85F68 /* Views */,
 				2CB7D1A225427B510097BE97 /* AppDelegate.swift */,
-				2CB7D1A425427B510097BE97 /* SceneDelegate.swift */,
-				2CB7D1A625427B510097BE97 /* ViewController.swift */,
-				2CB7D1A825427B510097BE97 /* Main.storyboard */,
 				2CB7D1AB25427B530097BE97 /* Assets.xcassets */,
 				2CB7D1AD25427B530097BE97 /* LaunchScreen.storyboard */,
 				2CB7D1B025427B530097BE97 /* Info.plist */,
+				2C92C8242542B81500E85F68 /* SceneDelegate.swift */,
 			);
 			path = BalletBuddy;
 			sourceTree = "<group>";
@@ -149,9 +227,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C92C8432543A82500E85F68 /* Colors.xcassets in Resources */,
+				2C92C8402543A67200E85F68 /* Avenir Next.ttc in Resources */,
+				2C92C84D2543BF4100E85F68 /* AddClassViewController.storyboard in Resources */,
 				2CB7D1AF25427B530097BE97 /* LaunchScreen.storyboard in Resources */,
 				2CB7D1AC25427B530097BE97 /* Assets.xcassets in Resources */,
-				2CB7D1AA25427B510097BE97 /* Main.storyboard in Resources */,
+				2C92C7E5254295D300E85F68 /* ClassViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,26 +243,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CB7D1A725427B510097BE97 /* ViewController.swift in Sources */,
+				2C92C83D2543A58900E85F68 /* Theme.swift in Sources */,
+				2C92C8562543BFDA00E85F68 /* AddClassViewController.swift in Sources */,
+				2C92C7E82542962B00E85F68 /* ClassViewController.swift in Sources */,
 				2C92C7E02542908300E85F68 /* Data.swift in Sources */,
+				2C92C8392543A46800E85F68 /* UIViewExtensions.swift in Sources */,
+				2C92C8602543E71D00E85F68 /* PopupUIView.swift in Sources */,
 				2C92C7DD25428D2300E85F68 /* ClassFunctions.swift in Sources */,
+				2C92C8462543BAC800E85F68 /* UIButtonExtensions.swift in Sources */,
 				2CB7D1A325427B510097BE97 /* AppDelegate.swift in Sources */,
+				2C92C8632543E90D00E85F68 /* AppButton.swift in Sources */,
+				2C92C8332542D80400E85F68 /* ClassTableViewCell.swift in Sources */,
 				2C92C7D825428D0300E85F68 /* ClassModel.swift in Sources */,
-				2CB7D1A525427B510097BE97 /* SceneDelegate.swift in Sources */,
+				2C92C8252542B81500E85F68 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2CB7D1A825427B510097BE97 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2CB7D1A925427B510097BE97 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2CB7D1AD25427B530097BE97 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -314,7 +394,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				"CODE_SIGN_STYLE[sdk=*]" = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = BalletBuddy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -322,6 +404,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.technicaappjosie.BalletBuddy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -332,7 +415,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = BalletBuddy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -340,6 +424,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.technicaappjosie.BalletBuddy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
