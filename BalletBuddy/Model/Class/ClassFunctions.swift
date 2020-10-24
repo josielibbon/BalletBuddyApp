@@ -14,17 +14,23 @@ class ClassFunctions{
     }
     
     static func readClass(completion: @escaping () -> ()){
-        DispatchQueue.global(qos: .userInteractive).async {
-            
-        
-        if Data.classModels.count == 0 {
-            Data.classModels.append(ClassModel(title: "Children's Beginning"))
-            Data.classModels.append(ClassModel(title: "Children's Intermediate"))
-            Data.classModels.append(ClassModel(title: "Children's Advanced"))
-            
+        DispatchQueue.global(qos: .userInitiated).async {
+            if Data.classModels.count == 0{
+                Data.classModels = MockData.createMockClassData()
             }
+        
+    
             DispatchQueue.main.async{
                 completion()
+            }
+        }
+    }
+    
+    static func readClass(by id: UUID, completion: @escaping (ClassModel?) -> ()) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            let classes = Data.classModels.first(where: { $0.id == id })
+            DispatchQueue.main.async {
+                completion(classes)
             }
         }
     }

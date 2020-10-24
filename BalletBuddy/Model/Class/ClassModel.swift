@@ -7,13 +7,18 @@
 
 import Foundation
 
-class ClassModel{
+struct ClassModel{
     let id: UUID
     var title: String
+    var comboModels = [ComboModel]()
     
-    init(title: String){
+    init(title: String, comboModels: [ComboModel]? = nil){
         
         id = UUID()
         self.title = title
+
+        if let comboModels = comboModels{
+            self.comboModels = comboModels
+        }
     }
 }

@@ -11,20 +11,30 @@ class ClassViewController: UIViewController {
 
    
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet var helpView: UIVisualEffectView!
     @IBOutlet weak var addButton: UIButton!
     
     var classIndexToEdit: Int?
-    
+    var seenClassHelp = "seenClassHelp"
         override func viewDidLoad(){
         super.viewDidLoad()
         
         tableView.dataSource = self
         tableView.delegate = self
         
-        ClassFunctions.readClass(completion: { [weak self] in
-            self?.tableView.reloadData()
+        ClassFunctions.readClass(completion: { [unowned self] in
+            self.tableView.reloadData()
+            
+            if Data.classModels.count > 0{
+                if UserDefaults.standard.bool(forKey: self.seenClassHelp) == false{
+                    view.addSubview(self.helpView)
+                    self.helpView.frame = self.view.bounds
+                }
+            }
         })
+        
+            
+            
             view.backgroundColor = Theme.background
             addButton.createFloatingActionButton()
     }
@@ -40,6 +50,14 @@ class ClassViewController: UIViewController {
         }
     }
     
+    @IBAction func closeHelpView(_ sender: AppButton) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.helpView.alpha = 0
+        }) { (success) in
+            self.helpView.removeFromSuperview()
+            UserDefaults.standard.set(true, forKey: self.seenClassHelp)
+        }
+    }
 }
 
 extension ClassViewController: UITableViewDataSource, UITableViewDelegate {
@@ -100,6 +118,14 @@ extension ClassViewController: UITableViewDataSource, UITableViewDelegate {
         return UISwipeActionsConfiguration(actions: [edit])
         
         
+        
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let classes = Data.classModels[indexPath.row]
+        let vc = ComboViewController.getInstance() as! ComboViewController
+        vc.classesId = classes.id
+        vc.classTitle = classes.title
+        navigationController?.pushViewController(vc, animated: true)
         
     }
 }
