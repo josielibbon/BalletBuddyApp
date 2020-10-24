@@ -46,15 +46,9 @@ class AddClassViewController: UIViewController {
     }
     
     @IBAction func save(_ sender: UIButton) {
-        classTextField.rightViewMode = .never
         
-        guard classTextField.text != "", let _ = classTextField.text else {
-            classTextField.layer.borderColor = UIColor.red.cgColor
-            classTextField.layer.borderWidth = 1
-            classTextField.layer.cornerRadius = 5
-            classTextField.rightViewMode = .always
-            return
-        }
+        guard classTextField.hasValue, let newComboName = classTextField.text else { return }
+        
         
         guard classTextField.text != "", let newClassName = classTextField.text else{
             return

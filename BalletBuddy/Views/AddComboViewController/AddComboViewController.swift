@@ -39,15 +39,8 @@ class AddComboViewController: UIViewController{
     }
     
     @IBAction func save(_ sender: UIButton) {
-        titleTextField.rightViewMode = .never
         
-        guard titleTextField.text != "", let _ = titleTextField.text else {
-            titleTextField.layer.borderColor = UIColor.red.cgColor
-            titleTextField.layer.borderWidth = 1
-            titleTextField.layer.cornerRadius = 5
-            titleTextField.rightViewMode = .always
-            return
-        }
+        guard titleTextField.hasValue, let newComboName = titleTextField.text else { return }
         
        // guard titleTextField.text != "", let newComboName = titleTextField.text else{
       //      return
