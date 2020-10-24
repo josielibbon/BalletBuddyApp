@@ -5,7 +5,7 @@
 //  Created by Josie Libbon on 10/23/20.
 //
 
-import Foundation
+import UIKit
 
 class ClassFunctions{
     
@@ -29,13 +29,13 @@ class ClassFunctions{
         }
     }
     
-    static func updateClass(classModel: ClassModel){
-        
+    static func updateClass(at index: Int, title: String, image: UIImage? = nil){
+        Data.classModels[index].title = title
         
     }
     
-    static func deleteClass(classModel: ClassModel){
-        
+    static func deleteClass(index: Int){
+        Data.classModels.remove(at: index)
         
     }
 }

@@ -14,6 +14,8 @@ class ClassViewController: UIViewController {
     
     @IBOutlet weak var addButton: UIButton!
     
+    var classIndexToEdit: Int?
+    
         override func viewDidLoad(){
         super.viewDidLoad()
         
@@ -30,9 +32,11 @@ class ClassViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toAddClassSegue"{
             let popup = segue.destination as! AddClassViewController
+            popup.classIndexToEdit = self.classIndexToEdit
             popup.doneSaving = { [weak self] in
                 self?.tableView.reloadData()
             }
+            classIndexToEdit = nil
         }
     }
     
@@ -57,5 +61,45 @@ extension ClassViewController: UITableViewDataSource, UITableViewDelegate {
         return 160
     }
     
-    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let classes = Data.classModels[indexPath.row]
+        
+        let delete = UIContextualAction(style: .destructive, title: "Delete") { (contextualAction, view, actionPerformed: @escaping (Bool) -> ()) in
+            let alert = UIAlertController(title: "Delete Class", message: "Are you sure you want to delete this class: \(classes.title)", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (alertAction) in actionPerformed(false)
+            
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (alertAction) in //Perform delete
+            ClassFunctions.deleteClass(index: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            actionPerformed(true)
+        }))
+        
+        self.present(alert, animated: true)
+        }
+        
+        delete.image = #imageLiteral(resourceName: "baseline_clear_white_18dp")
+        return UISwipeActionsConfiguration(actions: [delete])
+    }
+        func tableView(_ tableView: UITableView,
+            leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+            let edit = UIContextualAction(style: .normal, title: "Edit")
+            {   (contextualAction, view, actionPerformed: (Bool) -> ()) in
+                self.classIndexToEdit = indexPath.row
+                self.performSegue(withIdentifier: "toAddClassSegue", sender: nil)
+                actionPerformed(true)
+            }
+        
+            edit.image = #imageLiteral(resourceName: "baseline_edit_white_18dp")
+            edit.backgroundColor = UIColor(named: "EditColor")
+        
+        
+        return UISwipeActionsConfiguration(actions: [edit])
+        
+        
+        
+    }
 }
