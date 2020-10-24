@@ -16,7 +16,7 @@ class AddClassViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     
-    
+    var doneSaving: (() -> ())?
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +30,13 @@ class AddClassViewController: UIViewController {
     }
     
     @IBAction func save(_ sender: UIButton) {
+        ClassFunctions.createClass(classModel: ClassModel(title: classTextField.text!))
+        
+        if let doneSaving = doneSaving{
+            doneSaving()
+        }
         dismiss(animated: true)
-
+        
     }
     
 }

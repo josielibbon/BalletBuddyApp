@@ -10,7 +10,7 @@ import Foundation
 class ClassFunctions{
     
     static func createClass(classModel: ClassModel){
-        
+        Data.classModels.append(classModel)
     }
     
     static func readClass(completion: @escaping () -> ()){

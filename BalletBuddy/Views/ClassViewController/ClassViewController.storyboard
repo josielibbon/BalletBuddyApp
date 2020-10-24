@@ -56,7 +56,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <state key="normal" image="plus-2"/>
                                 <connections>
-                                    <segue destination="cju-DJ-EdU" kind="presentation" id="lIe-8a-XaZ"/>
+                                    <segue destination="cju-DJ-EdU" kind="presentation" identifier="toAddClassSegue" id="lIe-8a-XaZ"/>
                                 </connections>
                             </button>
                         </subviews>

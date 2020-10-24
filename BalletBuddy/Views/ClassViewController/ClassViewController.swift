@@ -27,6 +27,15 @@ class ClassViewController: UIViewController {
             addButton.createFloatingActionButton()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toAddClassSegue"{
+            let popup = segue.destination as! AddClassViewController
+            popup.doneSaving = { [weak self] in
+                self?.tableView.reloadData()
+            }
+        }
+    }
+    
 }
 
 extension ClassViewController: UITableViewDataSource, UITableViewDelegate {
