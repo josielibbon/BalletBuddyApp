@@ -47,7 +47,7 @@ class AddClassViewController: UIViewController {
     
     @IBAction func save(_ sender: UIButton) {
         
-        guard classTextField.hasValue, let newComboName = classTextField.text else { return }
+        guard classTextField.hasValue, let _ = classTextField.text else { return }
         
         
         guard classTextField.text != "", let newClassName = classTextField.text else{

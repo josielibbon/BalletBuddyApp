@@ -9,7 +9,7 @@ import Foundation
 
 class MockData{
     static func createMockClassData() -> [ClassModel]{
-        var mockClass = [ClassModel]()
+    var mockClass = [ClassModel]()
         mockClass.append(ClassModel(title: "Children's Beginning", comboModels: createMockComboData()))
         mockClass.append(ClassModel(title: "Advanced"))
         return mockClass
@@ -34,8 +34,9 @@ class MockData{
             stepModels.append(StepModel(title: "Promenade", subtitle: "6 counts", stepType: StepType.centre))
         default:
             stepModels.append(StepModel(title: "", subtitle: "", stepType: StepType.barre))
-        }
-            return stepModels
+                               
+            }
+           return stepModels
     
     }
     

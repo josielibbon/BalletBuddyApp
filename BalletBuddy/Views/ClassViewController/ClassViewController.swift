@@ -44,7 +44,8 @@ class ClassViewController: UIViewController {
             let popup = segue.destination as! AddClassViewController
             popup.classIndexToEdit = self.classIndexToEdit
             popup.doneSaving = { [weak self] in
-                self?.tableView.reloadData()
+                guard let self = self else { return }
+                self.tableView.reloadData()
             }
             classIndexToEdit = nil
         }

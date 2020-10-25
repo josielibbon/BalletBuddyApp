@@ -13,9 +13,22 @@ class ComboViewController: UIViewController {
     var classModel: ClassModel?
     var sectionHeaderHeight: CGFloat = 0.0
     var classTitle = ""
+    var doneSaving: ((StepModel) -> ())?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: AppButton!
+    
+    fileprivate func UpdateTableViewWithClassData() {
+        ClassFunctions.readClass(by: classesId)  { [weak self] (model) in
+            guard let self = self else { return }
+            self.classModel = model
+            
+            guard model != nil else { return }
+            
+            self.tableView.reloadData()
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,14 +38,7 @@ class ComboViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        ClassFunctions.readClass(by: classesId)  { [weak self] (model) in
-            guard let self = self else { return }
-            self.classModel = model
-            
-            guard model != nil else { return }
-           
-            self.tableView.reloadData()
-        }
+        UpdateTableViewWithClassData()
         sectionHeaderHeight = tableView.dequeueReusableCell(withIdentifier: "headerCell")?.contentView.bounds.height ?? 0
     }
     @IBAction func back(_ sender: UIButton) {
@@ -43,10 +49,12 @@ class ComboViewController: UIViewController {
         let alert = UIAlertController(title: "Which would you like to add?", message: nil, preferredStyle: .actionSheet)
         let comboAction = UIAlertAction(title: "Combination", style: .default, handler: handleAddCombo)
         
-        let stepAction = UIAlertAction(title: "Step", style: .default)  { (action) in
-            print ("Add new step")
-            }
+        let stepAction = UIAlertAction(title: "Step", style: .default, handler: handleAddStep)
+            
         let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        stepAction.isEnabled = classModel!.comboModels.count > 0
+        
         alert.addAction(comboAction)
         alert.addAction(stepAction)
         alert.addAction(cancel)
@@ -56,8 +64,41 @@ class ComboViewController: UIViewController {
         present(alert, animated: true)
         
         }
+    
+    
+    fileprivate func getClassIndex() -> Array<ClassModel>.Index? {
+        return Data.classModels.firstIndex(where: { (classModel) -> Bool in
+            classModel.id == classesId
+        })
+    }
+    
+    func handleAddStep(action: UIAlertAction) {
+        let vc = AddStepViewController.getInstance() as! AddStepViewController
+        vc.classModel = classModel
+        vc.classIndex = getClassIndex()
+        vc.doneSaving = { [weak self] comboIndex, stepModel in
+            guard let self = self else { return }
+            
+            let row = (self.classModel?.comboModels[comboIndex].stepModels.count)! - 1
+            self.classModel?.comboModels[comboIndex].stepModels.append(stepModel)
+            let indexPath = IndexPath(row: row, section: comboIndex)
+            self.tableView.insertRows(at: [indexPath], with: .automatic)
+        }
+        present(vc, animated: true)
+    }
+    
+    
     func handleAddCombo(action: UIAlertAction) {
-        let vc = AddComboViewController.getInstance()
+        let vc = AddComboViewController.getInstance() as! AddComboViewController
+        vc.classIndex = getClassIndex()
+        vc.doneSaving = { [weak self] comboModel in
+            guard let self = self else { return }
+            
+            let indexArray = [self.classModel?.comboModels.count ?? 0]
+            self.classModel?.comboModels.append(comboModel)
+            self.tableView.insertSections(IndexSet(indexArray), with: UITableView.RowAnimation.automatic)
+        }
+        
         present(vc, animated: true)
     }
     }

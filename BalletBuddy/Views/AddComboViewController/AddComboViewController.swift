@@ -18,8 +18,8 @@ class AddComboViewController: UIViewController{
     
     
     
-    var doneSaving: (() -> ())?
-    var classIndexToEdit: Int?
+    var doneSaving: ((ComboModel) -> ())?
+    var classIndex: Int!
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,14 +52,16 @@ class AddComboViewController: UIViewController{
       //      ClassFunctions.createCombo(classModel: ClassModel(title: titleTextField.text!))
      //   }
          
+        let comboModel = ComboModel(title: newComboName, subtitle: subtitleTextField.text ?? "", data: nil)
+        
+        
         
         if let doneSaving = doneSaving{
-            doneSaving()
+            doneSaving(comboModel)
         }
         dismiss(animated: true)
         
     }
-    
 
   
 

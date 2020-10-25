@@ -34,6 +34,11 @@
 		2C92C8982544D36000E85F68 /* AddComboViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92C8972544D36000E85F68 /* AddComboViewController.swift */; };
 		2C92C89B2544E21200E85F68 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92C89A2544E21200E85F68 /* UIViewControllerExtension.swift */; };
 		2C92C8A22544E9E700E85F68 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92C8A12544E9E700E85F68 /* UITextFieldExtension.swift */; };
+		2C92C8A52544F60600E85F68 /* ComboFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92C8A42544F60600E85F68 /* ComboFunctions.swift */; };
+		2C92C8BB2545110800E85F68 /* StepFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92C8BA2545110800E85F68 /* StepFunctions.swift */; };
+		2C92C8C02545146100E85F68 /* AddStepViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C92C8BF2545146100E85F68 /* AddStepViewController.storyboard */; };
+		2C92C8C32545147400E85F68 /* AddStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92C8C22545147400E85F68 /* AddStepViewController.swift */; };
+		2C92C8D125452E5600E85F68 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C92C8D025452E5600E85F68 /* DateExtension.swift */; };
 		2CB7D1A325427B510097BE97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB7D1A225427B510097BE97 /* AppDelegate.swift */; };
 		2CB7D1AC25427B530097BE97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB7D1AB25427B530097BE97 /* Assets.xcassets */; };
 		2CB7D1AF25427B530097BE97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB7D1AD25427B530097BE97 /* LaunchScreen.storyboard */; };
@@ -67,6 +72,11 @@
 		2C92C8972544D36000E85F68 /* AddComboViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddComboViewController.swift; sourceTree = "<group>"; };
 		2C92C89A2544E21200E85F68 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		2C92C8A12544E9E700E85F68 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		2C92C8A42544F60600E85F68 /* ComboFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComboFunctions.swift; sourceTree = "<group>"; };
+		2C92C8BA2545110800E85F68 /* StepFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepFunctions.swift; sourceTree = "<group>"; };
+		2C92C8BF2545146100E85F68 /* AddStepViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddStepViewController.storyboard; sourceTree = "<group>"; };
+		2C92C8C22545147400E85F68 /* AddStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStepViewController.swift; sourceTree = "<group>"; };
+		2C92C8D025452E5600E85F68 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		2CB7D19F25427B510097BE97 /* BalletBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BalletBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB7D1A225427B510097BE97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CB7D1AB25427B530097BE97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -112,6 +122,7 @@
 				2C92C7E32542958300E85F68 /* ClassViewController */,
 				2C92C84F2543BF5C00E85F68 /* AddClassViewController */,
 				2C92C86525446CC100E85F68 /* ComboViewController */,
+				2C92C8BE2545143700E85F68 /* AddStepViewController */,
 				2C92C8932544CF5C00E85F68 /* AddComboViewController */,
 			);
 			path = Views;
@@ -134,6 +145,7 @@
 				2C92C8452543BAC800E85F68 /* UIButtonExtension.swift */,
 				2C92C89A2544E21200E85F68 /* UIViewControllerExtension.swift */,
 				2C92C8A12544E9E700E85F68 /* UITextFieldExtension.swift */,
+				2C92C8D025452E5600E85F68 /* DateExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -172,8 +184,6 @@
 			children = (
 				2C92C86625446CE700E85F68 /* ComboViewController.storyboard */,
 				2C92C86D25446D4700E85F68 /* ComboViewController.swift */,
-				2C92C88B2544A8B600E85F68 /* HeaderTableViewCell.swift */,
-				2C92C8902544B1F000E85F68 /* StepsTableViewCell.swift */,
 			);
 			path = ComboViewController;
 			sourceTree = "<group>";
@@ -182,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				2C92C8712544777600E85F68 /* ComboModel.swift */,
+				2C92C8A42544F60600E85F68 /* ComboFunctions.swift */,
 			);
 			path = Combo;
 			sourceTree = "<group>";
@@ -191,6 +202,7 @@
 			children = (
 				2C92C8762544788500E85F68 /* StepModel.swift */,
 				2C92C87A2544795700E85F68 /* StepTypeEnum.swift */,
+				2C92C8BA2545110800E85F68 /* StepFunctions.swift */,
 			);
 			path = Step;
 			sourceTree = "<group>";
@@ -200,8 +212,19 @@
 			children = (
 				2C92C8942544D33700E85F68 /* AddComboViewController.storyboard */,
 				2C92C8972544D36000E85F68 /* AddComboViewController.swift */,
+				2C92C88B2544A8B600E85F68 /* HeaderTableViewCell.swift */,
+				2C92C8902544B1F000E85F68 /* StepsTableViewCell.swift */,
 			);
 			path = AddComboViewController;
+			sourceTree = "<group>";
+		};
+		2C92C8BE2545143700E85F68 /* AddStepViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2C92C8BF2545146100E85F68 /* AddStepViewController.storyboard */,
+				2C92C8C22545147400E85F68 /* AddStepViewController.swift */,
+			);
+			path = AddStepViewController;
 			sourceTree = "<group>";
 		};
 		2CB7D19625427B510097BE97 = {
@@ -299,6 +322,7 @@
 				2C92C8952544D33700E85F68 /* AddComboViewController.storyboard in Resources */,
 				2CB7D1AC25427B530097BE97 /* Assets.xcassets in Resources */,
 				2C92C7E5254295D300E85F68 /* ClassViewController.storyboard in Resources */,
+				2C92C8C02545146100E85F68 /* AddStepViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C92C8A52544F60600E85F68 /* ComboFunctions.swift in Sources */,
 				2C92C8982544D36000E85F68 /* AddComboViewController.swift in Sources */,
 				2C92C83D2543A58900E85F68 /* Theme.swift in Sources */,
 				2C92C8772544788500E85F68 /* StepModel.swift in Sources */,
@@ -317,6 +342,7 @@
 				2C92C7E82542962B00E85F68 /* ClassViewController.swift in Sources */,
 				2C92C8912544B1F000E85F68 /* StepsTableViewCell.swift in Sources */,
 				2C92C8722544777600E85F68 /* ComboModel.swift in Sources */,
+				2C92C8BB2545110800E85F68 /* StepFunctions.swift in Sources */,
 				2C92C7E02542908300E85F68 /* Data.swift in Sources */,
 				2C92C8392543A46800E85F68 /* UIViewExtension.swift in Sources */,
 				2C92C8602543E71D00E85F68 /* PopupUIView.swift in Sources */,
@@ -329,6 +355,8 @@
 				2C92C87E25447B1600E85F68 /* MockData.swift in Sources */,
 				2C92C8632543E90D00E85F68 /* AppButton.swift in Sources */,
 				2C92C88C2544A8B600E85F68 /* HeaderTableViewCell.swift in Sources */,
+				2C92C8D125452E5600E85F68 /* DateExtension.swift in Sources */,
+				2C92C8C32545147400E85F68 /* AddStepViewController.swift in Sources */,
 				2C92C8332542D80400E85F68 /* ClassTableViewCell.swift in Sources */,
 				2C92C7D825428D0300E85F68 /* ClassModel.swift in Sources */,
 				2C92C8252542B81500E85F68 /* SceneDelegate.swift in Sources */,
